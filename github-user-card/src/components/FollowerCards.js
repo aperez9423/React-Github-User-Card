@@ -2,12 +2,12 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const FollowerCards = ({ img, followers, bio }) => {
+const FollowerCards = ({ img, followers, location }) => {
     return (
         <Card>
-            <CardImg src={img}/>
-            <h2>{followers}</h2>
-            <p>{bio}</p>
+            <CardImg src={img} alt = 'image' />
+            <h3>{followers}</h3>
+            <p>{location}</p>
         </Card>
     );
 };
@@ -15,7 +15,21 @@ const FollowerCards = ({ img, followers, bio }) => {
 export default FollowerCards
 
 const Card = styled.div`
+    background-color: slategray;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+
+    h2 {
+        text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
 `
 
 const CardImg = styled.div`
+
+
 `
